@@ -49,11 +49,6 @@ bindsym $mod+Shift+s exec gnome-screenshot
 bindsym $mod+Shift+v exec vnc
 # bindsym $mod+u exec ranger_new_window
 
-# bindsym $mod+2 exec 2_screen.sh
-# bindsym $mod+d exec just_laptop.sh
-# bindsym $mod+Shift+s exec single_large.sh
-# bindsym $mod+s exec single_small.sh
-
 bindsym $mod+grave exec "toggle-touchpad"
 
 bindsym $mod+h focus left
@@ -195,8 +190,19 @@ bindsym $mod+r mode "resize"
 
 bar {
     status_command exec full_status.sh
+    strip_workspace_numbers yes
+    separator_symbol "❚"
+    tray_padding 0
     colors {
         background #282828
         statusline #ffffff
-    }
+        separator #666666
+#                          BORDER  BACKGROUND TEXT
+        focused_workspace  #a89984 $bg     $white
+        inactive_workspace $bg     $bg     $white
+        active_workspace   $bg     $bg     $white
+        urgent_workspace   #8b0000 #8b0000    $white
+        binding_mode       #8b0000 #8b0000    $white
+    }   
 } 
+
