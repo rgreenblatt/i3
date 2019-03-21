@@ -24,15 +24,17 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
+exec --no-startup-id "rm -rf /tmp/keyboard_info/ && mkdir /tmp/keyboard_info/"
 exec --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
 exec --no-startup-id "keyboard_setup"
+exec --no-startup-id "low_battery_notify"
 exec --no-startup-id "notify_setup"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -e nvim
+bindsym $mod+Return exec start_term
 
 # kill focused window
 bindsym $mod+q kill
@@ -47,6 +49,8 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+semicolon exec qutebrowser
 bindsym $mod+Shift+s exec gnome-screenshot
 bindsym $mod+Shift+v exec vnc
+bindsym $mod+Shift+Escape exec "touch /tmp/keyboard_info/kill" 
+bindsym --release $mod+Shift+slash exec "sleep 0.1 && rm -f /tmp/keyboard_info/kill && keyboard_setup" 
 # bindsym $mod+u exec ranger_new_window
 
 bindsym $mod+grave exec "toggle-touchpad"
@@ -63,10 +67,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-# bindsym $mod+Shift+h move left
-# bindsym $mod+Shift+j move down
-# bindsym $mod+Shift+k move up
-# bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
