@@ -49,8 +49,8 @@ bindsym $mod+d exec dmenu_run
 bindsym $mod+semicolon exec qutebrowser
 bindsym $mod+Shift+s exec gnome-screenshot
 bindsym $mod+Shift+v exec vnc
-bindsym $mod+Shift+Escape exec "touch /tmp/keyboard_info/kill" 
-bindsym --release $mod+Shift+slash exec "sleep 0.1 && rm -f /tmp/keyboard_info/kill && keyboard_setup" 
+bindsym $mod+Escape exec "touch /tmp/keyboard_info/kill"
+bindsym --release $mod+Escape exec "sleep 0.1 && rm -f /tmp/keyboard_info/kill && keyboard_setup"
 # bindsym $mod+u exec ranger_new_window
 
 bindsym $mod+grave exec "toggle-touchpad"
@@ -207,6 +207,6 @@ bar {
         active_workspace   $bg     $bg     $white
         urgent_workspace   #8b0000 #8b0000    $white
         binding_mode       #8b0000 #8b0000    $white
-    }   
-} 
+    }
+}
 
