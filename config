@@ -5,7 +5,7 @@ set $mod Mod4
 font pango:Hack 8
 
 # set primary gruvbox colorscheme colors
-set $bg #282828
+set $bg #1d2021
 set $red #cc241d
 set $green #98971a
 set $yellow #d79921
@@ -50,7 +50,7 @@ bindsym $mod+semicolon exec qutebrowser
 bindsym $mod+Shift+s exec gnome-screenshot
 bindsym $mod+Shift+v exec vnc
 bindsym $mod+Escape exec "touch /tmp/keyboard_info/kill"
-bindsym --release $mod+Escape exec "sleep 0.1 && rm -f /tmp/keyboard_info/kill && keyboard_setup"
+bindsym --release $mod+slash exec "sleep 0.1 && rm -f /tmp/keyboard_info/kill && keyboard_setup"
 # bindsym $mod+u exec ranger_new_window
 
 bindsym $mod+grave exec "toggle-touchpad"
@@ -198,7 +198,7 @@ bar {
     separator_symbol "❚"
     tray_padding 0
     colors {
-        background #282828
+        background #1d2021
         statusline #ffffff
         separator #666666
 #                          BORDER  BACKGROUND TEXT
