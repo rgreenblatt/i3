@@ -24,12 +24,6 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-exec --no-startup-id "rm -rf /tmp/keyboard_info/ && mkdir /tmp/keyboard_info/"
-exec --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
-exec --no-startup-id "keyboard_setup"
-exec --no-startup-id "low_battery_notify"
-exec --no-startup-id "notify_setup"
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
