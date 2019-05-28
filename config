@@ -41,7 +41,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+semicolon exec qutebrowser
-bindsym $mod+Shift+s exec gnome-screenshot
+bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+v exec vnc
 bindsym $mod+Escape exec "touch /tmp/keyboard_info/kill"
 bindsym --release $mod+slash exec "keyboard_setup"
