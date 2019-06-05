@@ -44,6 +44,8 @@ for_window [class="^fzf_launch$"] floating enable
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+bindsym $mod+Tab workspace back_and_forth
+
 bindsym $mod+semicolon exec qutebrowser
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Shift+v exec vnc
