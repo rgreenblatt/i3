@@ -5,7 +5,7 @@ set $mod Mod4
 font pango:Hack 8
 
 # set primary gruvbox colorscheme colors
-set $bg #1d2021
+set $bg #282828
 set $white #fbf1c7
 set $red #cc241d
 set $green #98971a
@@ -14,7 +14,6 @@ set $blue #458588
 set $purple #b16286
 set $aqua #689d68
 set $gray #a89984
-set $darkgray #1d2021
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #a89984 #665c54 #ffffff #484e50   #665c54
@@ -25,7 +24,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -198,7 +197,7 @@ bar {
     separator_symbol "❚"
     tray_padding 0
     colors {
-        background #1d2021
+        background $bg
         statusline #ffffff
         separator #666666
 #                          BORDER  BACKGROUND TEXT
