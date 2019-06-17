@@ -35,6 +35,8 @@ bindsym $mod+Return exec start_term
 # kill focused window
 bindsym $mod+q kill
 
+mouse_warping none
+
 # start dmenu (a program launcher)
 bindsym $mod+space exec st -c "fzf_launch" -g 100x24 -e fzf_launch
 for_window [class="^fzf_launch$"] floating enable
