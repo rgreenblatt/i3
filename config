@@ -37,13 +37,8 @@ bindsym $mod+q kill
 
 mouse_warping none
 
-# start dmenu (a program launcher)
 bindsym $mod+space exec st -c "fzf_launch" -g 100x24 -e fzf_launch
 for_window [class="^fzf_launch$"] floating enable
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+Tab workspace back_and_forth
 
